@@ -86,3 +86,8 @@ Contributions are what make the open-source community such an amazing place to l
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request (`we will merge within 24 hour`)
 
+## Contact
+
+Name -Utpal Kumar
+Project Link : https://github.com/utpal-kumar-08/Job-seeker-generator.git
+
