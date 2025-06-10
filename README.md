@@ -88,6 +88,7 @@ Contributions are what make the open-source community such an amazing place to l
 
 ## Contact
 
-Name -Utpal Kumar
+Utpal Kumar - [GitHub Profile](https://github.com/utpal-kumar-08)
+
 Project Link : https://github.com/utpal-kumar-08/Job-seeker-generator.git
 
