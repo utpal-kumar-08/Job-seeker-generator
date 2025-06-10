@@ -1,4 +1,4 @@
-# Job Portal App with MERN Stack
+# Job seeker-generator App with MERN Stack
 
 A comprehensive job portal application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack. This application allows users to browse job listings, apply for jobs, and manage their applications seamlessly.
 
@@ -31,7 +31,7 @@ To get a local copy up and running follow these simple steps.
 
 1. Clone the repo:
    ```sh
-   git clone https://github.com/exclusiveabhi/react-job-portal.git
+   git clone https://github.com/utpal-kumar-08/Job-seeker-generator.git
    ```
 2. Install NPM packages:
 
@@ -86,10 +86,3 @@ Contributions are what make the open-source community such an amazing place to l
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request (`we will merge within 24 hour`)
 
-## Please give a star ⭐ to the repository if you like it.
-
-## Contact
-
-Abhishek Rajput - [GitHub](https://github.com/exclusiveabhi)
-
-Project Link: [https://github.com/exclusiveabhi/react-job-portal.git](https://github.com/exclusiveabhi/react-job-portal.git)
