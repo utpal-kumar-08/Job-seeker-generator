@@ -9,13 +9,13 @@ const Jobs = () => {
   const navigateTo = useNavigate();
   useEffect(() => {
     try {
-      axios
-        .get("http://localhost:8000/api/v1/job/getall", {
+      const { data } = await axios.get(
+        `${import.meta.env.VITE_API_URL}/job/getall`,
+        {
           withCredentials: true,
-        })
-        .then((res) => {
-          setJobs(res.data);
-        });
+        }
+      );
+      setJobs(data);
     } catch (error) {
       console.log(error);
     }

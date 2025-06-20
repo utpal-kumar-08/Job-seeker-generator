@@ -29,34 +29,35 @@ const PostJob = () => {
       setSalaryTo("");
       setFixedSalary("");
     }
+    const jobData = fixedSalary.length >= 4
+      ? {
+          title,
+          description,
+          category,
+          country,
+          city,
+          location,
+          fixedSalary,
+        }
+      : {
+          title,
+          description,
+          category,
+          country,
+          city,
+          location,
+          salaryFrom,
+          salaryTo,
+        };
     await axios
       .post(
-        "http://localhost:8000/api/v1/job/post",
-        fixedSalary.length >= 4
-          ? {
-              title,
-              description,
-              category,
-              country,
-              city,
-              location,
-              fixedSalary,
-            }
-          : {
-              title,
-              description,
-              category,
-              country,
-              city,
-              location,
-              salaryFrom,
-              salaryTo,
-            },
+        `${import.meta.env.VITE_API_URL}/job/post`,
+        jobData,
         {
-          withCredentials: true,
           headers: {
             "Content-Type": "application/json",
           },
+          withCredentials: true,
         }
       )
       .then((res) => {
