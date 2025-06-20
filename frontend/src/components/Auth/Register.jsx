@@ -39,7 +39,19 @@ const Register = () => {
       setRole("");
       setIsAuthorized(true);
     } catch (error) {
-      toast.error(error.response.data.message);
+      if (error.code === 'ERR_NETWORK') {
+        toast.error('Unable to connect to server. Please make sure the backend server is running.');
+      } else if (error.response) {
+        // The request was made and the server responded with a status code
+        // that falls out of the range of 2xx
+        toast.error(error.response.data.message || 'Registration failed');
+      } else if (error.request) {
+        // The request was made but no response was received
+        toast.error('No response from server. Please try again later.');
+      } else {
+        // Something happened in setting up the request that triggered an Error
+        toast.error('An error occurred. Please try again.');
+      }
     }
   };
 
