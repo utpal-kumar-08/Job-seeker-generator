@@ -8,17 +8,20 @@ const Jobs = () => {
   const { isAuthorized } = useContext(Context);
   const navigateTo = useNavigate();
   useEffect(() => {
-    try {
-      const { data } = await axios.get(
-        `${import.meta.env.VITE_API_URL}/job/getall`,
-        {
-          withCredentials: true,
-        }
-      );
-      setJobs(data);
-    } catch (error) {
-      console.log(error);
-    }
+    const fetchJobs = async () => {
+      try {
+        const { data } = await axios.get(
+          `${import.meta.env.VITE_API_URL}/job/getall`,
+          {
+            withCredentials: true,
+          }
+        );
+        setJobs(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchJobs();
   }, []);
   if (!isAuthorized) {
     navigateTo("/");
